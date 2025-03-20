@@ -20,7 +20,7 @@ endif
 SRC_DIR = src
 TESTS_DIR = tests
 BUILD_DIR = build
-UTILS_DIR = '../../utils'
+UTILS_DIR = '../utils'
 
 # absolute imports
 CFLAGS += -I $(SRC_DIR)
