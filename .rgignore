@@ -1,0 +1,9 @@
+build/
+
+sta/*/makefile
+
+*.o
+*.out
+
+.cache/
+compile_commands.json

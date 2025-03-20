@@ -1,3 +1,14 @@
+# cores
+core.*
+vgcore.*
+
+# clangd
+.cache/
+compile_commands.json
+
+# build folder
+build/
+
 # Prerequisites
 *.d
 
