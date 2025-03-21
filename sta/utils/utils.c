@@ -26,3 +26,21 @@ void swap(void *buffer, size_t memb_size, size_t a, size_t b) {
         p2 += copy_size;
     }
 }
+
+#define COMPARE_BTYPE_IMPL(type, func_name)                                    \
+    COMPARE_BTYPE_DECL(type, func_name) {                                      \
+        const type arg1 = *((type *)a);                                        \
+        const type arg2 = *((type *)b);                                        \
+        if (arg1 == arg2)                                                      \
+            return 0;                                                          \
+        return arg1 - arg2;                                                    \
+    }
+
+COMPARE_BTYPE_IMPL(char, CompareChar);
+COMPARE_BTYPE_IMPL(unsigned char, CompareUChar);
+COMPARE_BTYPE_IMPL(int, CompareInt);
+COMPARE_BTYPE_IMPL(unsigned int, CompareUInt);
+COMPARE_BTYPE_IMPL(long, CompareLong);
+COMPARE_BTYPE_IMPL(unsigned long, CompareULong);
+COMPARE_BTYPE_IMPL(float, CompareFloat);
+COMPARE_BTYPE_IMPL(double, CompareDouble);
