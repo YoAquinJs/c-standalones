@@ -3,8 +3,8 @@
 
 #include <stddef.h>
 
-#include "utils/utils.h"
+#include "utils.h"
 
-int NumInversions(void* buffer, size_t memb_size, size_t size, Compare compare);
+int NumInversions(void *buffer, size_t memb_size, size_t size, Compare compare);
 
 #endif /* IFNDEF INVERSIONS_H */
